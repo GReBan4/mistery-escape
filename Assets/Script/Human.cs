@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
+    public GameObject Canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,17 @@ public class Human : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.Translate(0.0f, 0.0f, -0.03f);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.CompareTag("kabin"))
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Canvas.SetActive(true);
+            }
         }
     }
 }
