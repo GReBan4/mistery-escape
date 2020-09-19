@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CancelButton : MonoBehaviour
 {
-    public GameObject Canvas;
+    public GameObject Canvas2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,6 @@ public class CancelButton : MonoBehaviour
 
     public void OnClick()
     {
-        Canvas.SetActive(false);
+        Canvas2.SetActive(false);
     }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-    public GameObject Canvas;
+    public GameObject Canvas1;
+    public GameObject Canvas4;
+    public GameObject Canvas5;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +39,23 @@ public class Human : MonoBehaviour
     {
         if(other.CompareTag("kabin"))
         {
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetKey(KeyCode.Space))
             {
-                Canvas.SetActive(true);
+                Canvas1.SetActive(true);
+            }
+        }
+        if (other.CompareTag("door1"))
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Canvas4.SetActive(true);
+            }
+        }
+        if (other.CompareTag("book1"))
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Canvas5.SetActive(true);
             }
         }
     }
