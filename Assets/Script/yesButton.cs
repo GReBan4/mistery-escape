@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class yesButton : MonoBehaviour
 {
+    public GameObject Canvas2;
+    public GameObject Canvas3;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +22,14 @@ public class yesButton : MonoBehaviour
 
     public void OnClick()
     {
-        GameObject obj = GameObject.Find("Canvas");
+        //セリフ、花瓶消去
         GameObject obj1 = GameObject.Find("vase");
-        Destroy(obj);
+        GameObject obj2 = GameObject.Find("Canvas1");
         Destroy(obj1);
+        Destroy(obj2);
+
+        //次のセリフ表示
+        Canvas2.SetActive(false);
+        Canvas3.SetActive(true);
     }
 }
