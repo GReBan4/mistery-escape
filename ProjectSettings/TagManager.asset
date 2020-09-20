@@ -8,6 +8,7 @@ TagManager:
   - door1
   - book1
   - Human
+  - door2
   layers:
   - Default
   - TransparentFX
