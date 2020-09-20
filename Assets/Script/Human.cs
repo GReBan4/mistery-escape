@@ -7,6 +7,8 @@ public class Human : MonoBehaviour
     public GameObject Canvas1;
     public GameObject Canvas4;
     public GameObject Canvas5;
+    public GameObject Canvas8;
+    public GameObject Canvas9;
 
     // Start is called before the first frame update
     void Start()
@@ -58,5 +60,22 @@ public class Human : MonoBehaviour
                 Canvas5.SetActive(true);
             }
         }
+        if (other.CompareTag("door2"))
+        {
+            bool hasItem = ItemBox.instance.CanUseItem(Item.Type.BlackBall);
+            if(hasItem == true)
+            {
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Canvas9.SetActive(true);
+                    ItemBox.instance.UseItem(Item.Type.BlackBall);
+                }
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Canvas8.SetActive(true);
+            }
+        }
+
     }
 }

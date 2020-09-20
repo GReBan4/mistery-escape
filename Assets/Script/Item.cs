@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextButton : MonoBehaviour
+public class Item : MonoBehaviour
 {
-    public GameObject Canvas3;
+    public GameObject door2;
+
+    public enum Type
+    {
+        BlackBall,
+    }
+
+    public Type type;
 
     // Start is called before the first frame update
     void Start()
@@ -15,14 +22,12 @@ public class NextButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void OnClick()
+    public void OnDestroy()
     {
-        GameObject obj = GameObject.Find("Canvas3");
-        GameObject obj1 = GameObject.Find("BlackBall");
-        Destroy(obj);
-        Destroy(obj1);
+        ItemBox.instance.SetItem(type);
+        door2.GetComponent<door_src>().Open();
     }
 }

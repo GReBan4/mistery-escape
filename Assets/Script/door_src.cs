@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class door_src : MonoBehaviour
 {
-    public GameObject door;
+    public GameObject door2;
     Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = door.GetComponent<Rigidbody>();
+        rb = door2.GetComponent<Rigidbody>();
     }
 
-    void Open()
+    public void Open()
     {
         rb.isKinematic = false;
     }
