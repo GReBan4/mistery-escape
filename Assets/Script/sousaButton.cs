@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextButton : MonoBehaviour
+public class sousaButton : MonoBehaviour
 {
-    public GameObject Canvas3;
-    public GameObject Canvas8;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +18,7 @@ public class NextButton : MonoBehaviour
 
     public void OnClick()
     {
-        GameObject obj = GameObject.Find("Canvas3");
-        GameObject obj1 = GameObject.Find("BlackBall");
-        GameObject obj2 = GameObject.Find("Canvas8");
+        GameObject obj = GameObject.Find("Canvas10");
         Destroy(obj);
-        Destroy(obj1);
-        Destroy(obj2);
     }
 }
